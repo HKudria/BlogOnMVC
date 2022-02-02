@@ -2,7 +2,7 @@
 
 include_once('model/messages.php');
 include_once('model/category.php');
-$title = 'Add article';
+
 
 
 $cats = categoryAll();
@@ -23,6 +23,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	$fields = ['name' => '', 'text' => '', 'id_cat' => 0];
 }
 
-include('view/_formMassages.php');
+$title = 'Add article';
+$content = template('_formMassages',[
+	'cats' => $cats,
+	'fields'=>$fields,
+]);
 
 ?>

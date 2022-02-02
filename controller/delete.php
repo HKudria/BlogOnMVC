@@ -1,6 +1,5 @@
 <?php
 include_once('model/messages.php');
-include_once('model/errors.php');
 
 
 $id = checkID($_GET['id']?? '');
@@ -13,7 +12,8 @@ if ($id){
     header("Location: ./");
     exit();
 } else {
-   error404();
+    header( "$_SERVER[SERVER_PROTOCOL] 404 Not Found");
+    $content = template('errors/_404');
     exit();
 }
 

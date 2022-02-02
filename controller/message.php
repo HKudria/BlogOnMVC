@@ -2,7 +2,7 @@
 include_once('model/messages.php');
 
 
-$title = 'Show article';
+
 $id = checkID($_GET['id']?? '');
 if ($id){
     if($_GET['id']!=$id){
@@ -11,12 +11,18 @@ if ($id){
     }
     if($message = messagesOne($id)){
         //var_dump($message);
-        include('view/_massages.php');
+        $title = 'Show article';
+        $content = template('_massages',[
+            'id'=>$id,
+            'message'=>$message,
+        ]);
     } else {
-        error404();
+        header( "$_SERVER[SERVER_PROTOCOL] 404 Not Found");
+        $content = template('errors/_404');
     }
 } else {
-    error404();
+    header( "$_SERVER[SERVER_PROTOCOL] 404 Not Found");
+    $content = template('errors/_404');
 }
 
 ?>

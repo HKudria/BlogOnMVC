@@ -12,12 +12,18 @@ if ($id){
         exit();
     }
     if($fields = messagesOne($id)){
-        include('view/_formMassages.php');
+        $title = 'Add article';
+        $content = template('_formMassages',[
+            'cats' => $cats,
+            'fields'=>$fields,
+        ]);
     } else {
-        error404();
+        header( "$_SERVER[SERVER_PROTOCOL] 404 Not Found");
+        $content = template('errors/_404');
     }
 } else {
-    error404();
+    header( "$_SERVER[SERVER_PROTOCOL] 404 Not Found");
+    $content = template('errors/_404');
 }
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){

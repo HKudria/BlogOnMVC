@@ -6,8 +6,9 @@ function checkControllerName(string $name) : bool {
 
 function template(string $path, array $vars=[]) : string
 {
-    $fullPath = "view/_$path.php";
+    $fullPath = "view/$path.php";
     extract($vars);
+    ob_start();
     include ($fullPath);
-    return '';
+    return ob_get_clean();
 }
