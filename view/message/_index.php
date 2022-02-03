@@ -1,10 +1,7 @@
-
 <h1>Blog</h1>
-<ul>
-    <li><a href="?c=add"">add</a></li>
-</ul>
-
-
+<hr>
+<a href="?view=table">View as table</a>
+<hr>
 <div>
     <?php foreach($messages as $message): ?>
         <div>
@@ -18,5 +15,4 @@
             <hr>
         </div>
     <?php endforeach; ?>
-
 </div>

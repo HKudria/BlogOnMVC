@@ -12,9 +12,15 @@ if ($id){
     if($message = messagesOne($id)){
         //var_dump($message);
         $title = 'Show article';
-        $content = template('_massages',[
+        $left = template('message/_left',[
             'id'=>$id,
+        ]);
+        $innerContent = template('message/_massages',[
             'message'=>$message,
+        ]);
+        $content = $innerContent = template('base/_main2col',[
+            'left'=>$left,
+            'content'=>$innerContent,
         ]);
     } else {
         header( "$_SERVER[SERVER_PROTOCOL] 404 Not Found");

@@ -17,7 +17,7 @@ if(checkControllerName($cname) && file_exists($path)){
     $content = template('errors/_404');
 }
 
-$html = template('_main', [
+$html = template('base/_main', [
     'title'=>$title,
     'content'=> $content,
 ]);

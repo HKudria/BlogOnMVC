@@ -24,9 +24,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 }
 
 $title = 'Add article';
-$content = template('_formMassages',[
+$content = template('message/_formMassages',[
 	'cats' => $cats,
 	'fields'=>$fields,
+	'err' => $err,
 ]);
 
 ?>

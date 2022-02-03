@@ -5,7 +5,9 @@ include_once('model/messages.php');
 
 if($messages = messagesAll()){
     $title = 'Main page';
-    $content = template('_index',[
+    $isTable = ($_GET['view'] ?? '') == 'table';
+    $template =  $isTable ? '_index_table' : '_index';
+    $content = template('message/'.$template,[
         'messages'=>$messages,
     ]);
 } else {

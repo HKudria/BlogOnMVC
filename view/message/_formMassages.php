@@ -1,8 +1,8 @@
-
-<div class="form">
+<h1>Create new message</h1>
+<div class="form-group">
 	<form method="post">
 		Category:
-		<select name="id_cat">
+        <select class="form-select" name="id_cat">
 		<?php foreach($cats as $cat): ?>
 			<option value="<?php echo $cat['id']?>"
 					  <?php echo ($cat['id'] == $fields['id_cat'] ? 'selected' : '')?>
@@ -12,10 +12,10 @@
 		<?php endforeach; ?>
 		</select><br>
 		Name:<br>
-		<input type="text" name="name" value="<?php echo $fields['name']?>"><br>
+		<input type="text" name="name" class="form-control" value="<?php echo $fields['name']?>"><br>
 		Text:<br>
-		<textarea name="text"><?php echo $fields['text']?></textarea><br>
-		<button>Send</button>
+		<textarea class="form-control" name="text"><?php echo $fields['text']?></textarea><br>
+        <button class="btn btn-success">Send</button>
 		<p>
             <?php
             if(!empty($err)):
