@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title><?php echo $title ?? '' ?></title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/main.css">
 </head>
 <body>
 <header class="site-header">
@@ -18,13 +18,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./">Home</a>
+                        <a class="nav-link active" aria-current="page" href="<?php echo BASE_URL ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?c=add">Add</a>
+                        <a class="nav-link" href="<?php echo BASE_URL ?>?c=add">Add</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?c=contacts">Contact</a>
+                        <a class="nav-link" href="<?php echo BASE_URL ?>?c=contacts">Contact</a>
                     </li>
                 </ul>
             </div>

@@ -1,7 +1,4 @@
 <?php
-include_once('model/messages.php');
-
-
 
 $id = checkID($_GET['id']?? '');
 if ($id){

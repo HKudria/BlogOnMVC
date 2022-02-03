@@ -1,10 +1,5 @@
 <?php
 
-include_once('model/messages.php');
-include_once('model/category.php');
-
-
-
 $cats = categoryAll();
 $err = '';
 

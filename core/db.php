@@ -3,7 +3,7 @@
 	function dbInstance() : PDO{
 		static $db;
 		if($db === null){
-			$db = new PDO('mysql:dbname=lesson;host=localhost;port=3306;charset=utf8','root','');
+			$db = new PDO('mysql:dbname='.DB_BASE.';host='.DB_HOST.';port=3306;charset=utf8',DB_USER,DB_PASS);
             //connect for MacBook
 			//$db = new PDO('mysql:dbname=dl5;host=localhost;port=3306;charset=utf8','root','root');
 		}

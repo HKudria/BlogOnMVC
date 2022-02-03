@@ -1,8 +1,5 @@
 <?php
 
-include_once('model/messages.php');
-
-
 if($messages = messagesAll()){
     $title = 'Main page';
     $isTable = ($_GET['view'] ?? '') == 'table';

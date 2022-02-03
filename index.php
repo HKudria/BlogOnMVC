@@ -1,9 +1,5 @@
 <?php
-include_once('core/db.php');
-include_once('core/arr.php');
-include_once('core/system.php');
-
-
+include_once ('init.php');
 
 $cname = $_GET['c'] ?? 'index';
 $path = "controller/$cname.php";
