@@ -15,7 +15,7 @@ if ($id){
         $innerContent = template('message/_massages',[
             'message'=>$message,
         ]);
-        $content = $innerContent = template('base/_main2col',[
+        $content = template('base/_main2col',[
             'left'=>$left,
             'content'=>$innerContent,
         ]);
