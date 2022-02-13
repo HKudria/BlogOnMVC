@@ -25,5 +25,5 @@
             endif;?>
         </p>
 	</form>
-    <a href="./">Go to main page</a>
+    <a href="<?php echo BASE_URL ?>">Go to main page</a>
 </div>

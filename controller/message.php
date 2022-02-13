@@ -1,9 +1,9 @@
 <?php
 
-$id = checkID($_GET['id']?? '');
+$id = checkID($allParams[1]?? '');
 if ($id){
-    if($_GET['id']!=$id){
-        header("Location: ?c=message&id=$id");
+    if($allParams[1]!=$id){
+        header("Location: message/$id");
         exit();
     }
     if($message = messagesOne($id)){

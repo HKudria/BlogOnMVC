@@ -1,6 +1,6 @@
 <h1>Blog</h1>
 <hr>
-<a href="?view=table">View as table</a>
+<a href="<?php echo BASE_URL ?>view/table">View as table</a>
 <hr>
 <div>
     <?php foreach($messages as $message): ?>
@@ -11,7 +11,7 @@
             <div>
                 <?=$message['text']?>
             </div>
-            <a href="?c=message&id=<?=$message['id_message']?>">Read more</a>
+            <a href="<?php echo BASE_URL ?>message/<?=$message['id_message']?>">Read more</a>
             <hr>
         </div>
     <?php endforeach; ?>

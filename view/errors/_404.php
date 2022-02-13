@@ -6,6 +6,6 @@
 </head>
 <body>
 <h1>PAGE NOT FOUND | 404</h1>
-<a href="./">Go to main page</a>
+<a href="<?php echo BASE_URL ?>">Go to main page</a>
 </body>
 </html>

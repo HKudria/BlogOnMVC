@@ -3,11 +3,11 @@
 $title = 'Edit article';
 
 $err = '';
-$id = checkID($_GET['id'] ?? '');
+$id = checkID($allParams[1] ?? '');
 if ($id){
     $cats = categoryAll();
-    if($_GET['id']!=$id){
-        header("Location: ?c=edit&id=$id");
+    if($allParams[1]!=$id){
+        header("Location: edit/$id");
         exit();
     }
     if($fields = messagesOne($id)){
@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $err = validateFields($fields);
     if(empty($validateError)){
         messagesEdit($fields,$id);
-        header("Location: ?c=message&id=$id");
+        header("Location: ../message/$id");
         exit();
     }
 }

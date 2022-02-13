@@ -1,6 +1,6 @@
 <h1>Blog</h1>
 <hr>
-<a href="./">Standard view</a>
+<a href="<?php echo BASE_URL ?>">Standard view</a>
 
     <table class="table table-striped">
         <thead>
@@ -19,7 +19,7 @@
             <td><?=$message['category']?></td>
             <td><?=$message['dt_add']?></td>
             <td> <?=$message['text']?></td>
-            <th scope="row"> <a href="?c=message&id=<?=$message['id_message']?>">Read more</a></th>
+            <th scope="row"> <a href="<?php echo BASE_URL ?>message/<?=$message['id_message']?>">Read more</a></th>
         </tr>
         <?php endforeach; ?>
     </table>

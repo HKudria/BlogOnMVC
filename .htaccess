@@ -1,0 +1,21 @@
+RewriteEngine on
+Options +SymLinksIfOwnerMatch
+
+# Rewrite all other URLs to index.php?[url]
+RewriteRule .* index.php?getfromre=$0 [QSA]
+
+#denyed rewriting physical files
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#denyed to open folder
+Options -Indexes
+
+#denyed to open php files
+<FilesMatch "\.(php)$">
+    Deny from all
+</FilesMatch>
+
+#allow opening index.php
+<FilesMatch "index.(php)$">
+    Allow from all
+</FilesMatch>

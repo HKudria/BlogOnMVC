@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	if(empty($err)){
 		messagesAdd($fields);
 		$id = dbLastId();
-		header("Location: ?c=message&id=$id");
+		header("Location: message/$id");
 		exit();
 	}
 

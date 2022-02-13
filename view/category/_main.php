@@ -8,7 +8,7 @@
             <div>
                 <?=$message['text']?>
             </div>
-            <a href="?c=message&id=<?=$message['id_message']?>">Read more</a>
+            <a href="<?php echo BASE_URL ?>message/<?=$message['id_message']?>">Read more</a>
             <hr>
         </div>
     <?php endforeach; ?>

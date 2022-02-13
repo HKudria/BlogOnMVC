@@ -21,10 +21,10 @@
                         <a class="nav-link active" aria-current="page" href="<?php echo BASE_URL ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo BASE_URL ?>?c=add">Add</a>
+                        <a class="nav-link" href="<?php echo BASE_URL ?>add">Add</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo BASE_URL ?>?c=contacts">Contact</a>
+                        <a class="nav-link" href="<?php echo BASE_URL ?>contacts">Contact</a>
                     </li>
                 </ul>
             </div>

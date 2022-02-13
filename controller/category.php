@@ -1,8 +1,8 @@
 <?php
-$id = checkID($_GET['id']?? '');
+$id = checkID($allParams[1]?? '');
 if ($id){
-    if($_GET['id']!=$id){
-        header("Location: ?c=category&id=$id");
+    if($allParams[1]!=$id){
+        header("Location: category/$id");
         exit();
     }
     if($category = categoryOne($id)){
