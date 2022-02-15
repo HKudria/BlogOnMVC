@@ -1,14 +1,17 @@
 RewriteEngine on
+#for open permission on index.php
 Options +SymLinksIfOwnerMatch
-
-# Rewrite all other URLs to index.php?[url]
-RewriteRule .* index.php?getfromre=$0 [QSA]
 
 #denyed rewriting physical files
 RewriteCond %{REQUEST_FILENAME} !-f
 
+# Rewrite all other URLs to index.php?[url]
+RewriteRule .* index.php?getfromre=$0 [QSA]
+
+
+
 #denyed to open folder
-Options -Indexes
+#Options -Indexes
 
 #denyed to open php files
 <FilesMatch "\.(php)$">
