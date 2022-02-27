@@ -19,6 +19,6 @@ RewriteRule .* index.php?getfromre=$0 [QSA]
 </FilesMatch>
 
 #allow opening index.php
-<FilesMatch "index.(php)$">
+<FilesMatch "^index.(php)$">
     Allow from all
 </FilesMatch>

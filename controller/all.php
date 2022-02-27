@@ -2,8 +2,7 @@
 
 if($messages = messagesAll()){
     $title = 'Main page';
-    $isTable = ($allParams[1] ?? '') == 'table';
-    var_dump($isTable);
+    $isTable = (URL_PARAMS['table'] ?? '') == 'table';
     $template =  $isTable ? '_index_table' : '_index';
     $content = template('message/'.$template,[
         'messages'=>$messages,

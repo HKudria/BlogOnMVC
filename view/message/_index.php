@@ -1,6 +1,6 @@
 <h1>Blog</h1>
 <hr>
-<a href="<?php echo BASE_URL ?>view/table">View as table</a>
+<a href="<?php echo BASE_URL ?>table">View as table</a>
 <hr>
 <div>
     <?php foreach($messages as $message): ?>

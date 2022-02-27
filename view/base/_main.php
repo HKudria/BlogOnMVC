@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title><?php echo $title ?? '' ?></title>
+    <link rel="canonical" href="<?php echo $canonical ?>">
     <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/css/main.css">
 </head>
