@@ -38,6 +38,11 @@ return (function () {
             'controller' => 'delete',
             'params' => ['id' => 1],
         ],
+        [
+            'test' => '/^auth\/login\/?$/',
+            'controller' => 'auth/login',
+            'params' => null,
+        ],
 
     ];
 })();
