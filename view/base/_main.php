@@ -27,6 +27,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo BASE_URL ?>contacts">Contact</a>
                     </li>
+
+                    <?php if($user===null): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo BASE_URL ?>auth/login">Login</a>
+                    </li>
+                    <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo BASE_URL ?>auth/logout">Logout</a>
+                    </li>
+                    <?php endif; ?>
                 </ul>
             </div>
             </div>

@@ -1,6 +1,11 @@
 <?php
+
+session_start();
+
 include_once ('init.php');
-//var_dump($_GET);
+
+$user = authUser();
+
 $pageCanonical = BASE_HOST.BASE_URL;
 $uri = $_SERVER['REQUEST_URI'];
 $badUrl = BASE_URL . 'index.php';
@@ -57,6 +62,7 @@ $html = template('base/_main', [
     'title'=>$title,
     'content'=> $content,
     'canonical' => $pageCanonical,
+    'user' => $user,
 ]);
 
 echo $html;

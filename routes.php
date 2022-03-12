@@ -43,6 +43,11 @@ return (function () {
             'controller' => 'auth/login',
             'params' => null,
         ],
+        [
+            'test' => '/^auth\/logout\/?$/',
+            'controller' => 'auth/logout',
+            'params' => null,
+        ],
 
     ];
 })();

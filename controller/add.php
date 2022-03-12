@@ -3,6 +3,11 @@
 $cats = categoryAll();
 $err = '';
 
+if($user===null){
+	header('Location:' . BASE_URL.'auth/login');
+	exit();
+}
+
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	$fields = extractField($_POST,['name','text','id_cat']);
 	$err = validateFields($fields);
